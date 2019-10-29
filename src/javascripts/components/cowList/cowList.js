@@ -1,18 +1,15 @@
-import cowData from '../../helpers/data/cows';
+import smash from '../../helpers/data/smash';
 
 import './cowList.scss';
 
 const buildCows = () => {
-  // console.log('inside cow builder');
-  cowData.getCows()
+  smash.getCompleteCows()
     .then((response) => {
-      console.log('cow array from cowList', response);
+      console.log('cow array from cowlist', response);
     })
-    // call a domString builder function and pass in cows or a response
     .catch((error) => {
       console.error('shit broke', error);
     });
 };
-
 
 export default { buildCows };
