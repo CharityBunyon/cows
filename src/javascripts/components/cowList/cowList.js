@@ -6,14 +6,9 @@ const buildCows = () => {
   // console.log('inside cow builder');
   cowData.getCows()
     .then((response) => {
-      const demCows = response.data.cows;
-      const cows = [];
-      Object.keys(demCows).forEach((cowId) => {
-        demCows[cowId].id = cowId;
-        cows.push(demCows[cowId]);
-      });
-      console.log('it worked!', cows);
+      console.log('cow array from cowList', response);
     })
+    // call a domString builder function and pass in cows or a response
     .catch((error) => {
       console.error('shit broke', error);
     });
