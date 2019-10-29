@@ -1,3 +1,4 @@
+// import utilities from '../../helpers/utilities';
 import farmerData from '../../helpers/data/farmerData';
 import './farmerList.scss';
 
@@ -8,6 +9,5 @@ const buildFarmers = () => {
     })
     .catch((error) => console.error('shit broke', error));
 };
-
 
 export default { buildFarmers };
